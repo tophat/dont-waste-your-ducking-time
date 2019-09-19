@@ -1,4 +1,4 @@
-# Don't Waster Your Ducking Time
+# Don't Waste Your Ducking Time
 
 ## Overview
 
