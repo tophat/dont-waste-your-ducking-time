@@ -4,4 +4,7 @@ module.exports = {
     '@tophat/eslint-config/react',
     '@tophat/eslint-config/jest',
   ],
+  rules: {
+    'react/prop-types': 'off',
+  },
 }
