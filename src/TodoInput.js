@@ -1,14 +1,19 @@
 import React, { useState, useCallback } from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from './duck'
+import { addTodo, addDelayedTodo } from './duck'
 
-function TodoInput({ onSubmit }) {
+function TodoInput({ onSubmit, onDelayedSubmit }) {
     const [value, setValue] = useState('')
 
     const onAddClick = useCallback(() => {
         onSubmit(value)
         setValue('')
     }, [onSubmit, value])
+
+    const onDelayedAddClick = useCallback(() => {
+        onDelayedSubmit(value)
+        setValue('')
+    }, [onDelayedSubmit, value])
 
     const onChange = useCallback(
         event => {
@@ -21,6 +26,7 @@ function TodoInput({ onSubmit }) {
         <div className="TodoInput">
             <input type="text" value={value} onChange={onChange} />
             <button onClick={onAddClick}>Add</button>
+            <button onClick={onDelayedAddClick}>Add with delay</button>
         </div>
     )
 }
@@ -31,6 +37,7 @@ function mapStateToProps() {
 
 const mapDispatchToProps = {
     onSubmit: addTodo,
+    onDelayedSubmit: addDelayedTodo,
 }
 
 export default connect(

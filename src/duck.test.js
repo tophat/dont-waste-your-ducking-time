@@ -1,5 +1,10 @@
 import configureStore from './configureStore'
-import reducer, { addTodo, toggleTodo, selectTodos } from './duck'
+import reducer, {
+    addTodo,
+    toggleTodo,
+    addDelayedTodo,
+    selectTodos,
+} from './duck'
 
 /*
  * These tests all test the ENTIRE duck. Actions are dispatched to the store,
@@ -76,6 +81,20 @@ describe('Todos duck', () => {
         expect(selectTodos(store.getState())).toEqual([
             { text: 'Buy milk', completed: false },
             { text: 'Ride a donkey', completed: false },
+        ])
+    })
+
+    // We can test sagas like this as well! Adding a helper called
+    // `selectFromEndState` to our store lets wait for sagas to finish before
+    // selecting from the final state of the reducer
+    // Inspired by https://github.com/redux-saga/redux-saga/issues/1312
+    // TODO: figure out how to restart the root saga so we can do multiple
+    // assertions in a single test
+    it('adds a todo with a delay', async () => {
+        store.dispatch(addDelayedTodo('Wow dude owen wilson'))
+        const todos = await store.selectFromEndState(selectTodos)
+        expect(todos).toEqual([
+            { text: 'Wow dude owen wilson', completed: false },
         ])
     })
 })
