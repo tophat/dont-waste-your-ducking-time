@@ -1,4 +1,5 @@
 import { createStore } from 'redux'
+
 import rootReducer from './duck'
 
 function configureStore() {
