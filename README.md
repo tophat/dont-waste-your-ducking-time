@@ -4,6 +4,9 @@
 [![codecov](https://codecov.io/gh/tophat/dont-waste-your-ducking-time/branch/master/graph/badge.svg)](https://codecov.io/gh/tophat/dont-waste-your-ducking-time)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=tophat/dont-waste-your-ducking-time)](https://dependabot.com)
 [![Slack workspace](https://slackinvite.dev.tophat.com/badge.svg)](https://opensource.tophat.com/slack)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Overview
 
@@ -90,3 +93,23 @@ Run tests:
 ```
 yarn test
 ```
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://msrose.github.io"><img src="https://avatars3.githubusercontent.com/u/3495264?v=4" width="100px;" alt=""/><br /><sub><b>Michael Rose</b></sub></a><br /><a href="https://github.com/tophat/dont-waste-your-ducking-time/commits?author=msrose" title="Code">💻</a> <a href="https://github.com/tophat/dont-waste-your-ducking-time/commits?author=msrose" title="Tests">⚠️</a> <a href="https://github.com/tophat/dont-waste-your-ducking-time/commits?author=msrose" title="Documentation">📖</a> <a href="#infra-msrose" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="http://christianbattista.com"><img src="https://avatars0.githubusercontent.com/u/241211?v=4" width="100px;" alt=""/><br /><sub><b>Christian Battista</b></sub></a><br /><a href="https://github.com/tophat/dont-waste-your-ducking-time/commits?author=cbattista" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
