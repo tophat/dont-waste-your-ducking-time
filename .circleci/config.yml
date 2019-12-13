@@ -15,7 +15,8 @@ jobs:
             - checkout
             - run: yarn install --frozen-lockfile
             - run: yarn lint
-            - run: yarn test
+            - run: yarn test --coverage
+            - run: bash <(curl -s https://codecov.io/bash)
             - run: yarn build
 
 workflows:

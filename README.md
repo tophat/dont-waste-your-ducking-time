@@ -1,6 +1,7 @@
 # Don't Waste Your Ducking Time
 
 [![Builds](https://img.shields.io/circleci/project/github/tophat/dont-waste-your-ducking-time/master.svg)](https://circleci.com/gh/tophat/dont-waste-your-ducking-time)
+[![codecov](https://codecov.io/gh/tophat/dont-waste-your-ducking-time/branch/master/graph/badge.svg)](https://codecov.io/gh/tophat/dont-waste-your-ducking-time)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=tophat/dont-waste-your-ducking-time)](https://dependabot.com)
 [![Slack workspace](https://slackinvite.dev.tophat.com/badge.svg)](https://opensource.tophat.com/slack)
 
