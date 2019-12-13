@@ -1,5 +1,5 @@
 import configureStore from './configureStore'
-import reducer, { addTodo, toggleTodo, selectTodos } from './duck'
+import reducer, { addTodo, selectTodos, toggleTodo } from './duck'
 
 /*
  * These tests all test the ENTIRE duck. Actions are dispatched to the store,

@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react'
 import { connect } from 'react-redux'
+
 import { selectTodos, toggleTodo } from './duck'
 
 function Todo({ index, text, completed, onClick }) {
@@ -44,7 +45,4 @@ const mapDispatchToProps = {
     onClick: toggleTodo,
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(TodoList)
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList)

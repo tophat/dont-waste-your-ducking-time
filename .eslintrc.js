@@ -1,10 +1,6 @@
 module.exports = {
-  extends: [
-    '@tophat',
-    '@tophat/eslint-config/react',
-    '@tophat/eslint-config/jest',
-  ],
-  rules: {
-    'react/prop-types': 'off',
-  },
+    extends: ['@tophat'],
+    rules: {
+        'react/prop-types': 'off',
+    },
 }

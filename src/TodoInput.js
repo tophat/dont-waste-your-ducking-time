@@ -1,5 +1,6 @@
-import React, { useState, useCallback } from 'react'
+import React, { useCallback, useState } from 'react'
 import { connect } from 'react-redux'
+
 import { addTodo } from './duck'
 
 function TodoInput({ onSubmit }) {
@@ -33,7 +34,4 @@ const mapDispatchToProps = {
     onSubmit: addTodo,
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(TodoInput)
+export default connect(mapStateToProps, mapDispatchToProps)(TodoInput)
