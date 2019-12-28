@@ -31,7 +31,9 @@ test them each in isolation. So why don't we start there? That's what the
 [testing pyramid](https://martinfowler.com/articles/practical-test-pyramid.html)
 suggests, after all:
 
-![testing pyramid](https://martinfowler.com/articles/practical-test-pyramid/testPyramid.png)
+<p align="center">
+  <img src="https://martinfowler.com/articles/practical-test-pyramid/testPyramid.png" alt="testing pyramid">
+</p>
 
 There are some examples of these kind of tests in this project, in the [duck
 test file](./src/duck.test.js).
