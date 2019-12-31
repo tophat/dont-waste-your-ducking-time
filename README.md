@@ -4,9 +4,7 @@
 [![codecov](https://codecov.io/gh/tophat/dont-waste-your-ducking-time/branch/master/graph/badge.svg)](https://codecov.io/gh/tophat/dont-waste-your-ducking-time)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=tophat/dont-waste-your-ducking-time)](https://dependabot.com)
 [![Slack workspace](https://slackinvite.dev.tophat.com/badge.svg)](https://opensource.tophat.com/slack)
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Overview
 
@@ -18,6 +16,14 @@ thread](https://github.com/reduxjs/redux/issues/1171) in which
 [@bvaughn](https://github.com/bvaughn) describes a way of testing Redux
 applications in order to get "the most bang for your buck" (dare I say "bang
 for your duck"?).
+
+See the [motivation section](#motivation) for more details on this testing strategy.
+
+## Examples
+
+Examples of **bad** duck tests are found [here](./src/bad.test.js).
+
+Examples of **good** duck tests are found [here](./src/good.test.js).
 
 ## Motivation
 
