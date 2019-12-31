@@ -94,7 +94,7 @@ function reducer(state = defaultState, action) {
     }
 }
 
-function fetchTodosFromServer() {
+export function fetchTodosFromServer() {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve([
@@ -111,7 +111,7 @@ function fetchTodosFromServer() {
     })
 }
 
-function* fetchTodosSaga() {
+export function* fetchTodosSaga() {
     try {
         const todos = yield call(fetchTodosFromServer)
         yield put(fetchTodosSucceeded(todos))

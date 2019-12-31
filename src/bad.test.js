@@ -40,9 +40,11 @@ describe('Todos reducer', () => {
     it('updates the state when a todo is added', () => {
         const action = addTodo('Wear some pants')
         const nextState = reducer(undefined, action)
-        expect(nextState).toEqual({
-            todos: [{ text: 'Wear some pants', completed: false }],
-        })
+        expect(nextState).toEqual(
+            expect.objectContaining({
+                todos: [{ text: 'Wear some pants', completed: false }],
+            }),
+        )
     })
 
     it('updates the state when a todo is added to an existing list', () => {
