@@ -1,9 +1,13 @@
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
+import createSagaMiddleware from 'redux-saga'
 
-import rootReducer from './duck'
+import rootReducer, { sagaWatcher } from './duck'
 
 function configureStore() {
-    return createStore(rootReducer)
+    const sagaMiddleware = createSagaMiddleware()
+    const store = createStore(rootReducer, applyMiddleware(sagaMiddleware))
+    sagaMiddleware.run(sagaWatcher)
+    return store
 }
 
 export default configureStore
