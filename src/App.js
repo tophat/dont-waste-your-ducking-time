@@ -5,6 +5,7 @@ import './App.css'
 
 import TodoList from './TodoList'
 import TodoInput from './TodoInput'
+import FetchTodosButton from './FetchTodosButton'
 import configureStore from './configureStore'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                 <TodoList />
                 <hr />
                 <TodoInput />
+                <FetchTodosButton />
             </div>
         </Provider>
     )
