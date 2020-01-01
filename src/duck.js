@@ -1,5 +1,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
 
+import client from './client'
+
 const ADD_TODO = 'ADD_TODO'
 
 export function addTodo(value) {
@@ -94,26 +96,9 @@ function reducer(state = defaultState, action) {
     }
 }
 
-export function fetchTodosFromServer() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve([
-                {
-                    text: 'Be a llama',
-                    completed: false,
-                },
-                {
-                    text: 'Kick a donkey',
-                    completed: true,
-                },
-            ])
-        }, 1000)
-    })
-}
-
 export function* fetchTodosSaga() {
     try {
-        const todos = yield call(fetchTodosFromServer)
+        const todos = yield call(client.fetchTodosFromServer)
         yield put(fetchTodosSucceeded(todos))
     } catch (e) {
         yield put(fetchTodosFailed(e))

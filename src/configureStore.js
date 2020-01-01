@@ -6,7 +6,7 @@ import rootReducer, { sagaWatcher } from './duck'
 function configureStore() {
     const sagaMiddleware = createSagaMiddleware()
     const store = createStore(rootReducer, applyMiddleware(sagaMiddleware))
-    sagaMiddleware.run(sagaWatcher)
+    store.sagaTask = sagaMiddleware.run(sagaWatcher)
     return store
 }
 

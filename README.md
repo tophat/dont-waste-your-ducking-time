@@ -25,6 +25,9 @@ Examples of **bad** duck tests are found [here](./src/bad.test.js).
 
 Examples of **good** duck tests are found [here](./src/good.test.js).
 
+Examples of **good** duck tests **involving sagas** are found
+[here](./src/good.saga.test.js).
+
 ## Motivation 💪
 
 First of all, what is a duck? It's a combination of related action creators, a
