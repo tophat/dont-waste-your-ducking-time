@@ -6,7 +6,7 @@ defaults: &defaults
   working_directory: ~/repo
   # Pick a Docker image here: https://circleci.com/docs/2.0/circleci-images/
   docker:
-    - image: circleci/node:10.13.0
+    - image: circleci/node:12.13.1
 
 jobs:
     build:
