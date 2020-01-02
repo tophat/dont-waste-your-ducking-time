@@ -11,9 +11,8 @@
 This repo is a simple example project demonstrating how to test the different
 components of a Redux application. The general idea: 
 
-<p align="center">
-  <h3><strong>Don't unit test your action creators, reducers, and selectors individually; instead, write tests that test the whole "duck".</strong></h3>
-</p>
+> **Don't unit test your action creators, reducers, and selectors individually;
+> instead, write tests that test the whole "duck".**
 
 This strategy comes from [this Redux issue
 thread](https://github.com/reduxjs/redux/issues/1171) in which
