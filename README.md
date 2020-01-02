@@ -12,7 +12,7 @@ This repo is a simple example project demonstrating how to test the different
 components of a Redux application. The general idea: 
 
 <p align="center">
-  <strong>Don't unit test your action creators, reducers, and selectors individually; instead, write tests that test the whole "duck"</strong>.
+  <h3><strong>Don't unit test your action creators, reducers, and selectors individually; instead, write tests that test the whole "duck".</strong></h3>
 </p>
 
 This strategy comes from [this Redux issue
