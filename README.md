@@ -9,10 +9,10 @@
 ## Overview 📃
 
 This repo is a simple example project demonstrating how to test the different
-components of a Redux application. The general idea: 
+components of a Redux application.
 
-> **Don't unit test your action creators, reducers, and selectors individually;
-> instead, write tests that test the whole "duck".**
+The general idea: **Don't write individual unit tests for your action creators,
+reducers, and selectors; instead, write tests that test the whole "duck"**.
 
 This strategy comes from [this Redux issue
 thread](https://github.com/reduxjs/redux/issues/1171) in which
