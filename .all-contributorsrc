@@ -31,7 +31,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "dependabot-preview[bot]",
+      "name": "dependabot-preview[bot]",
+      "avatar_url": "https://avatars3.githubusercontent.com/in/2141?v=4",
+      "profile": "https://github.com/apps/dependabot-preview",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
