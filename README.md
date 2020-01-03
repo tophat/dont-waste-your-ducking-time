@@ -131,6 +131,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://msrose.github.io"><img src="https://avatars3.githubusercontent.com/u/3495264?v=4" width="100px;" alt=""/><br /><sub><b>Michael Rose</b></sub></a><br /><a href="https://github.com/tophat/dont-waste-your-ducking-time/commits?author=msrose" title="Code">💻</a> <a href="https://github.com/tophat/dont-waste-your-ducking-time/commits?author=msrose" title="Tests">⚠️</a> <a href="https://github.com/tophat/dont-waste-your-ducking-time/commits?author=msrose" title="Documentation">📖</a> <a href="#infra-msrose" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="http://christianbattista.com"><img src="https://avatars0.githubusercontent.com/u/241211?v=4" width="100px;" alt=""/><br /><sub><b>Christian Battista</b></sub></a><br /><a href="https://github.com/tophat/dont-waste-your-ducking-time/commits?author=cbattista" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/apps/dependabot-preview"><img src="https://avatars3.githubusercontent.com/in/2141?v=4" width="100px;" alt=""/><br /><sub><b>dependabot-preview[bot]</b></sub></a><br /><a href="#infra-dependabot-preview[bot]" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
