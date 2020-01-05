@@ -1,5 +1,7 @@
 # Don't Waste Your Ducking Time
 
+<span><img align="right" src="logo.png" alt="Logo"></span>
+
 [![Builds](https://img.shields.io/circleci/project/github/tophat/dont-waste-your-ducking-time/master.svg)](https://circleci.com/gh/tophat/dont-waste-your-ducking-time)
 [![codecov](https://codecov.io/gh/tophat/dont-waste-your-ducking-time/branch/master/graph/badge.svg)](https://codecov.io/gh/tophat/dont-waste-your-ducking-time)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=tophat/dont-waste-your-ducking-time)](https://dependabot.com)
@@ -139,3 +141,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## Credits
+
+Thanks to [LogoMakr](https://logomakr.com/) for having an impressive bounty of free stock duck images.
