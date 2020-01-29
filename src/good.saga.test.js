@@ -95,6 +95,9 @@ describe('fetch todos saga', () => {
         // running so we can make assertions on the final state of the store.
         // (TODO: how can we restart the sagas so we can dispatch more actions
         // and make more assertions on the same store?)
+        // For redux-saga < 1.0.0, use these lines to stop the sagas instead:
+        //    store.sagaTask.cancel()
+        //    await store.sagaTask.done
         store.dispatch(END)
         await store.sagaTask.toPromise()
 
