@@ -96,7 +96,7 @@ function reducer(state = defaultState, action) {
     }
 }
 
-export function* fetchTodosSaga() {
+function* fetchTodosSaga() {
     try {
         const todos = yield call(client.fetchTodosFromServer)
         yield put(fetchTodosSucceeded(todos))
