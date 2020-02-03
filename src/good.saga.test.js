@@ -7,7 +7,7 @@ import configureStore from './configureStore'
 import client from './client'
 import reducer, {
     fetchTodos,
-    fetchTodosSaga,
+    sagaWatcher,
     selectIsFetchingTodos,
     selectTodos,
     selectTodosFetchError,
@@ -17,6 +17,7 @@ import reducer, {
  * We can apply the same philosophy of "test the whole duck" when testing sagas
  * as well. They're trickier to set up since they run async, but don't forget
  * the following rules of thumb and you should be fine:
+ * - Only use a root saga, and trigger other sagas by dispatching actions
  * - Use REAL state from a REAL store
  * - Don't test saga implementation details or reducer implementation details;
  *   make assertions on values returned by selectors
@@ -38,6 +39,8 @@ describe('fetch todos saga', () => {
      *   implementation details
      * - Always use withReducer; we want the saga to operate on a REAL state
      *   from a REAL store
+     * - Only pass your root saga to expectSaga, and test child sagas by using
+     *   `.dispatch(...)` to trigger actions
      * - Use `.provide(...)` as little as possible; you should only be mocking
      *   network requests - if you're using a real state from a real store you
      *   shouldn't have to mock selectors used in your saga
@@ -48,11 +51,9 @@ describe('fetch todos saga', () => {
     it('populates the state with todos on success', async () => {
         const mockTodos = [{ text: 'Yeet a totodile', completed: false }]
 
-        store.dispatch(fetchTodos())
-        expect(selectIsFetchingTodos(store.getState())).toBe(true)
-
-        const { storeState } = await expectSaga(fetchTodosSaga)
-            .withReducer(reducer, store.getState())
+        const { storeState } = await expectSaga(sagaWatcher)
+            .withReducer(reducer)
+            .dispatch(fetchTodos())
             .provide([[call(client.fetchTodosFromServer), mockTodos]])
             .run()
 
@@ -63,11 +64,9 @@ describe('fetch todos saga', () => {
     it('populates the state with an error on failure', async () => {
         const mockError = new Error()
 
-        store.dispatch(fetchTodos())
-        expect(selectIsFetchingTodos(store.getState())).toBe(true)
-
-        const { storeState } = await expectSaga(fetchTodosSaga)
-            .withReducer(reducer, store.getState())
+        const { storeState } = await expectSaga(sagaWatcher)
+            .withReducer(reducer)
+            .dispatch(fetchTodos())
             .provide([
                 [call(client.fetchTodosFromServer), throwError(mockError)],
             ])
