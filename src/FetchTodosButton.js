@@ -11,7 +11,7 @@ function FetchTodosButton({ isFetchingTodos, fetchTodos }) {
     )
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
     isFetchingTodos: selectIsFetchingTodos(state),
 })
 
