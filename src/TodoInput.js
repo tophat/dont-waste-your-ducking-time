@@ -12,7 +12,7 @@ function TodoInput({ onSubmit }) {
     }, [onSubmit, value])
 
     const onChange = useCallback(
-        event => {
+        (event) => {
             setValue(event.target.value)
         },
         [setValue],
