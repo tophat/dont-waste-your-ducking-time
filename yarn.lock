@@ -1566,14 +1566,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6":
-  version "7.8.7"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.7.tgz#8fefce9802db54881ba59f90bb28719b4996324d"
-  integrity sha512-+AATMUFppJDw6aiR5NVPHqIQBlV/Pj8wY/EZH+lmvRdUo9xBaz/rF3alAwFJQavvKfeOlPE7oaaDHVbcySbCsg==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.8.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
   version "7.9.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
   integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
@@ -2465,10 +2458,10 @@ ajv@^6.12.0:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-all-contributors-cli@^6.14.2:
-  version "6.14.2"
-  resolved "https://registry.yarnpkg.com/all-contributors-cli/-/all-contributors-cli-6.14.2.tgz#4d7652f700a827b9a2f749720f13605ee1c2f8bd"
-  integrity sha512-DUeZrL0EsXwdYZ1msEeI0cY7DNQqggRKLMfDzgZu+l/72KLf/ZuT97wnUIGAFvSPUlfSAXIVDhivOlZRFjYH+g==
+all-contributors-cli@^6.15.0:
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/all-contributors-cli/-/all-contributors-cli-6.15.0.tgz#b6e3518d324431f94514989cac412a7f4a7455e2"
+  integrity sha512-dITUDL9cZzSq+nZmCC5F5x5FnvVMsuNNboK79rgkCuxe6ojSLH9qRDAdiJvprWBmEvRd5tcuEBrcS5uE3nBInQ==
   dependencies:
     "@babel/runtime" "^7.7.6"
     async "^3.0.1"
