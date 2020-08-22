@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@tophat/eslint-config": "^0.5.0",
-    "all-contributors-cli": "^6.17.1",
+    "all-contributors-cli": "^6.17.2",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jest": "^23.20.0",
