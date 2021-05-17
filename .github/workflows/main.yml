@@ -1,0 +1,40 @@
+name: Don't waste your ducking time CI
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Setup dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn build
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Setup dependencies
+        run: yarn install --frozen-lockfile
+      - name: Test
+        run: yarn test -- coverage
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Setup dependencies
+        run: yarn install --frozen-lockfile
+      - name: Lint
+        run: yarn lint
