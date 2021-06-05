@@ -52,7 +52,6 @@ jobs:
           node-version: '14'
       - name: Setup dependencies
         run: yarn install --frozen-lockfile
-      - name: Coverage
       - uses: actions/download-artifact@v2
         with:
           name: test-coverage
