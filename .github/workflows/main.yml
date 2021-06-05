@@ -9,7 +9,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '14'
       - name: Setup dependencies
         run: yarn install --frozen-lockfile
       - name: Build
@@ -19,22 +19,42 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: '12'
+          node-version: '14'
       - name: Setup dependencies
         run: yarn install --frozen-lockfile
       - name: Test
         run: yarn test --coverage
+      - uses: actions/upload-artifact@v2
+        with:
+          name: test-coverage
+          path: coverage 
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: '12'
+          node-version: '14'
       - name: Setup dependencies
         run: yarn install --frozen-lockfile
       - name: Lint
         run: yarn lint
+  coverage:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Setup dependencies
+        run: yarn install --frozen-lockfile
+      - name: Coverage
+      - uses: actions/download-artifact@v2
+        with:
+          name: test-coverage
+      - name: Upload coverage
+        run: yarn coverage
