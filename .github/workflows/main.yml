@@ -1,5 +1,9 @@
 name: Don't waste your ducking time CI
-on: pull_request
+on:
+  pull_request:
+  push:
+    branches: [master]
+
 
 jobs:
   build:
@@ -10,7 +14,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Setup dependencies
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-${{hashFiles('./yarn.lock')}}
+      - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
       - name: Build
         run: yarn build
@@ -22,7 +32,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Setup dependencies
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-${{hashFiles('./yarn.lock')}}
+      - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
       - name: Test
         run: yarn test --coverage
@@ -38,7 +54,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Setup dependencies
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-${{hashFiles('./yarn.lock')}}
+      - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
       - name: Lint
         run: yarn lint
@@ -51,7 +73,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Setup dependencies
+      - uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-${{hashFiles('./yarn.lock')}}
+      - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
       - uses: actions/download-artifact@v2
         with:
